@@ -54,7 +54,7 @@ resource "sakuracloud_ssh_key" "key" {
   public_key = file("./id_rsa.pub")
 }
 
-resource "ansible_host" "my_server" {
+resource "ansible_host" "web_server" {
   name   = sakuracloud_server.web_server.ip_address
   groups = ["web"]
   variables = {
